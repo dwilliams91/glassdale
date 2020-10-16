@@ -1,10 +1,15 @@
 import { getOfficers, useOfficers } from './officers/OfficerProvider.js'
-import {getCriminals} from './criminals/CriminalProvider.js'
+import {getCriminals, useCriminals} from './criminals/CriminalProvider.js'
 import { criminalList } from './criminals/CriminalList.js'
 
 console.log("Welcome to the main module")
  
-// console.log(getOfficers())
-let blah=getCriminals()
-console.log(blah)
+getCriminals()
+.then(()=>{
+    const criminalArray=useCriminals()
+    console.log(criminalArray)
+    console.log("This shouldn't be undefined", criminalArray[0])
+
+
+})
 // criminalList()
