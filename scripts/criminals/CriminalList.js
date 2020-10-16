@@ -3,7 +3,6 @@ import { createCriminalCard } from "./Criminals.js"
 
 export const criminalList = () => {
     const criminalOutput = document.querySelector(".criminalsContainer")
-    console.log("before the then", useCriminals)
 
     getCriminals()
     .then(() => {
