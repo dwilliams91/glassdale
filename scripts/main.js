@@ -8,8 +8,12 @@ getCriminals()
 .then(()=>{
     const criminalArray=useCriminals()
     console.log(criminalArray)
-    console.log("This shouldn't be undefined", criminalArray[0])
-
+    // console.log("This shouldn't be undefined", criminalArray[0])
 
 })
-// criminalList()
+
+
+.then(()=>{
+    criminalList()    
+
+})
