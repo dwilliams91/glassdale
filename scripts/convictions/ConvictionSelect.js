@@ -32,7 +32,7 @@ const render = convictionsCollection => {
             <option>
             ${
                 convictionsCollection.map(convictionObject => {
-                        const valueToBeInNewArray = convictionObject.conviction
+                        const valueToBeInNewArray = convictionObject.name
                         return `<option>${valueToBeInNewArray}</option>`
                     }
                 )
