@@ -7,7 +7,7 @@ export const useConvictions = () => {
 
 export const getConvictions = () => {
     // fetch takes an argument. Which is the link to the API
-    return fetch("https://criminals.glassdale.us/criminals")
+    return fetch("https://criminals.glassdale.us/crimes")
     // .then is waiting until its got it. Then converts it to json. Its argument IS a function
         .then(response =>  response.json()
         )
