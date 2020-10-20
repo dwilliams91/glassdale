@@ -9,19 +9,21 @@ const eventHub = document.querySelector(".container")
 // Listen for the custom event you dispatched in ConvictionSelect
 eventHub.addEventListener("crimeChosen", event => {
     console.log(event)
-    // Use the property you added to the event detail.
     if (event.detail.crimeThatWasChosen !== "0"){
-        /*
-            Filter the criminals application state down to the people that committed the crime
-        */
+        
+        console.log(event.detail.crimeThatWasChosen)
        const listOfCriminals=useCriminals()
-        const matchingCriminals = listOfCriminals.filter(criminal=> criminal.conviction===event.detail.crimeThatWasChosen)
+
+       const convictionArray=useConvictions()
+       
+       const convictionThatWasChosen= convictionArray.find(convictionObj => {
+            return convictionObj.id === parseInt(event.detail.crimeThatWasChosen)
+        })
+        console.log(convictionThatWasChosen)
+        const matchingCriminals = listOfCriminals.filter(criminal=> criminal.conviction===convictionThatWasChosen.name)
         console.log(matchingCriminals)
         render(matchingCriminals)
-        /*
-            Then invoke render() and pass the filtered collection as
-            an argument
-        */
+        
     }
 })
 
@@ -44,6 +46,14 @@ export const CriminalList = () => {
             render(appStateCriminals)
         })
 }
+
+// end of my stuff
+
+
+
+
+
+
 
 
 // export const criminalList = () => {
