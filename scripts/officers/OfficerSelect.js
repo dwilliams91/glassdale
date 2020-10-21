@@ -11,7 +11,7 @@ eventHub.addEventListener("change", changeEvent => {
         // Define a custom event
         const customEvent = new CustomEvent("officerSelected", {
             detail: {
-                officer: selectedOfficer
+                officer: changeEvent.target.value
             }
         })
 
@@ -22,8 +22,8 @@ eventHub.addEventListener("change", changeEvent => {
 
 const render = officerCollection => {
     contentTarget.innerHTML = `
-    <select class="dropdown" id="crimeSelect">
-    <option value="0">Please select a crime...</option>
+    <select class="dropdown" id="officerSelect">
+    <option value="0">Please select the arresting officer...</option>
     ${
         officerCollection.map(officerObject => {
                 return `<option value="${officerObject.id}">${officerObject.name}</option>`
