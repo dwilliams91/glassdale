@@ -52,19 +52,3 @@ export const CriminalList = () => {
 
 
 
-// export const criminalList = () => {
-//     const contentTarget = document.querySelector(".criminalsContainer")
-
-//     getCriminals()
-//     .then(() => {
-
-//         const criminalArray = useCriminals()
-//         let criminalHTMLRepresentation = " "
-//         for (const criminal of criminalArray) {
-//             criminalHTMLRepresentation += createCriminalCard(criminal)
-//         }
-//         contentTarget.innerHTML = criminalHTMLRepresentation
-//     })
-
-
-// }
