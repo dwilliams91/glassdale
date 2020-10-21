@@ -8,10 +8,8 @@ const eventHub = document.querySelector(".container")
 
 // Listen for the custom event you dispatched in ConvictionSelect
 eventHub.addEventListener("crimeChosen", event => {
-    console.log(event)
     if (event.detail.crimeThatWasChosen !== "0"){
         
-        console.log(event.detail.crimeThatWasChosen)
        const listOfCriminals=useCriminals()
 
        const convictionArray=useConvictions()
@@ -19,9 +17,7 @@ eventHub.addEventListener("crimeChosen", event => {
        const convictionThatWasChosen= convictionArray.find(convictionObj => {
             return convictionObj.id === parseInt(event.detail.crimeThatWasChosen)
         })
-        console.log(convictionThatWasChosen)
         const matchingCriminals = listOfCriminals.filter(criminal=> criminal.conviction===convictionThatWasChosen.name)
-        console.log(matchingCriminals)
         render(matchingCriminals)
         
     }
