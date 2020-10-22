@@ -5,6 +5,7 @@ import { getConvictions, useConvictions } from './convictions/ConvictionProvider
 import { ConvictionSelect } from './convictions/ConvictionSelect.js'
 import { OfficerList } from './officers/OfficerList.js'
 import {officerSelect} from './officers/OfficerSelect.js'
+import { NoteForm } from './Notes/NoteForm.js'
 
 console.log("Welcome to the main module")
  
@@ -12,4 +13,4 @@ CriminalList()
 ConvictionSelect()
 OfficerList()
 officerSelect()
-
+NoteForm()
