@@ -8,7 +8,8 @@ const render = () => {
         <input id="note--dateOfInterview" type="date">
         <input id=note--author type=text placeholder="Your Name Here">
         <input id=note--suspect type=text placeholder="Suspect">
-         <textarea id="note--note" placeholder="Notes"></textarea>
+        <div>
+         <textarea id="note--note" placeholder="Notes"></textarea></div>
         <button id="saveNote">Save Note</button>
     `
 }

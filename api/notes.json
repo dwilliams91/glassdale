@@ -15,14 +15,8 @@
       "suspect": "Bryan",
       "note": "He's Guilty",
       "id": 2
-    },
-    {
-      "Date": "2020-10-06",
-      "timestamp": 1603385214283,
-      "author": "David",
-      "suspect": "Bryan",
-      "note": "He's Guilty",
-      "id": 3
     }
+    
+    
   ]
 }

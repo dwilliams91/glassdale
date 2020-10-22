@@ -6,6 +6,7 @@ import { ConvictionSelect } from './convictions/ConvictionSelect.js'
 import { OfficerList } from './officers/OfficerList.js'
 import {officerSelect} from './officers/OfficerSelect.js'
 import { NoteForm } from './Notes/NoteForm.js'
+import { noteList } from './Notes/NoteList.js'
 
 console.log("Welcome to the main module")
  
@@ -14,3 +15,4 @@ ConvictionSelect()
 OfficerList()
 officerSelect()
 NoteForm()
+noteList()
