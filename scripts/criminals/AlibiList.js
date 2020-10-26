@@ -39,7 +39,7 @@ const render=(criminalObj)=>{
             <p>${alibiObj.alibi}</p>
 
             `
-        })
+        }).join("")
         
         }
     </div>
