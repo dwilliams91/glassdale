@@ -41,6 +41,7 @@ eventHub.addEventListener("officerSelected", event => {
     }
 })
 
+
 // calling criminal.js for each individual criminal
 const render = criminalCollection => {
     const contentTarget = document.querySelector(".criminalsContainer")
@@ -63,7 +64,16 @@ export const CriminalList = () => {
 
 // end of my stuff
 
-
+export const CreateCriminalEventListener = () => {
+    eventHub.addEventListener("CriminalButtonClicked", (eventObj) => {
+        console.log("this button was clicked")
+        getCriminals()
+            .then(() => {
+                const arrayOfCriminals = useCriminals()
+                render(arrayOfCriminals)
+            })
+    })
+}
 
 
 

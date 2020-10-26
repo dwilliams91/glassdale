@@ -33,6 +33,7 @@ const render=(criminalObj)=>{
     contentTarget.innerHTML+=
     `
     <div class=alibi__list>
+    <h5>Known Associations</h5>
         ${criminalObj.known_associates.map(alibiObj=>{
             return  `
             <p>${alibiObj.name}</p>
