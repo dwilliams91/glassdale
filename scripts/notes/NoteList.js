@@ -22,7 +22,7 @@ const render = noteArray => {
     for (const note of noteArray){
         noteHTML +=createNoteCard(note)
     }
-    console.log(noteHTML)
+    // console.log(noteHTML)
     contentTarget.innerHTML = `${noteHTML}`
 }
 
