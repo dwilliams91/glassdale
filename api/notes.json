@@ -15,8 +15,14 @@
       "suspect": "Bryan",
       "note": "He's Guilty",
       "id": 2
+    },
+    {
+      "Date": "2020-10-23",
+      "timestamp": 1603461263930,
+      "author": "David",
+      "suspect": "Silas",
+      "note": "I think he is the criminal. He looks shifty.",
+      "id": 3
     }
-    
-    
   ]
 }

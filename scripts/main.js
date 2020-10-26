@@ -7,6 +7,7 @@ import { OfficerList } from './officers/OfficerList.js'
 import {officerSelect} from './officers/OfficerSelect.js'
 import { NoteForm } from './Notes/NoteForm.js'
 import { noteList } from './Notes/NoteList.js'
+import{CreatAlibiEventListener} from './criminals/AlibiList.js'
 
 console.log("Welcome to the main module")
  
@@ -16,3 +17,4 @@ OfficerList()
 officerSelect()
 NoteForm()
 noteList()
+CreatAlibiEventListener()

@@ -7,14 +7,17 @@ import { createCriminalCard } from "./Criminals.js"
 const eventHub = document.querySelector(".container")
 
 
+// dispatching the alibi event listener
+
+
+
+
+
 // Listen for the custom event you dispatched in ConvictionSelect
 eventHub.addEventListener("crimeChosen", event => {
     if (event.detail.crimeThatWasChosen !== "0"){
-        
        const listOfCriminals=useCriminals()
-
        const convictionArray=useConvictions()
-       
        const convictionThatWasChosen= convictionArray.find(convictionObj => {
             return convictionObj.id === parseInt(event.detail.crimeThatWasChosen)
         })
@@ -26,12 +29,8 @@ eventHub.addEventListener("crimeChosen", event => {
 
 eventHub.addEventListener("officerSelected", event => {
     if (event.detail.officer !== "0"){
-        console.log("hi")
-
         const listOfCriminals=useCriminals()
-
         const officerArray=useOfficers()
-
         const officerThatWasChosen=officerArray.find(officerObj =>{
             return officerObj.id===parseInt(event.detail.officer)
         })
@@ -42,10 +41,9 @@ eventHub.addEventListener("officerSelected", event => {
     }
 })
 
-
+// calling criminal.js for each individual criminal
 const render = criminalCollection => {
     const contentTarget = document.querySelector(".criminalsContainer")
-
     let crinimalHTML=""
     for (const crime of criminalCollection){
         crinimalHTML +=createCriminalCard(crime)
