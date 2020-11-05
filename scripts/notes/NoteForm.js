@@ -9,10 +9,10 @@ const render = (criminal) => {
         <input id="note--dateOfInterview" type="date">
         <input id=note--author type=text placeholder="Your Name Here">
         <select id="noteForm--criminal" class="criminalSelect">
-        <option value="0">Please select the suspect</option>
+        <option  value="0">Please select the suspect</option>
     ${
         criminal.map(criminal => {
-                return `<option value="${criminal.id}">${criminal.name}</option>`
+                return `<option id="note--suspect" value="${criminal.id}">${criminal.name}</option>`
             }
         )
     }
@@ -37,7 +37,7 @@ eventHub.addEventListener("click", clickEvent=>{
             Date:dateOfInterview,
             timestamp:timeStamp,
             author: authorOfNote,
-            suspect: suspect,
+            criminalId: suspect,
             note: note,
         }
         saveNote(newNote)
