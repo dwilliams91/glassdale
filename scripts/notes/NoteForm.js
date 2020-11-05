@@ -1,17 +1,28 @@
 import { saveNote } from "./NoteProvider.js"
+import {getCriminals, useCriminals} from '../criminals/CriminalProvider.js'
 
 const contentTarget = document.querySelector(".noteFormContainer")
 const eventHub=document.querySelector(".container")
 
-const render = () => {
-    contentTarget.innerHTML = `
+const render = (criminal) => {
+    let htmlRepresentation= `
         <input id="note--dateOfInterview" type="date">
         <input id=note--author type=text placeholder="Your Name Here">
-        <input id=note--suspect type=text placeholder="Suspect">
+        <select id="noteForm--criminal" class="criminalSelect">
+        <option value="0">Please select the suspect</option>
+    ${
+        criminal.map(criminal => {
+                return `<option value="${criminal.id}">${criminal.name}</option>`
+            }
+        )
+    }
+        </select>
         <div>
          <textarea id="note--note" placeholder="Notes"></textarea></div>
         <button id="saveNote">Save Note</button>
     `
+    contentTarget.innerHTML =htmlRepresentation
+    
 }
 eventHub.addEventListener("click", clickEvent=>{
     if (clickEvent.target.id==="saveNote"){
@@ -35,5 +46,10 @@ eventHub.addEventListener("click", clickEvent=>{
 
 
 export const NoteForm = () => {
-    render()
+    getCriminals()
+    .then(() => {
+        const criminals = useCriminals()
+        render(criminals)
+    })
 }
+

@@ -5,14 +5,14 @@
       "Date": "10/22/20",
       "timestamp": "99999",
       "author": "Sherlock Holmes",
-      "suspect": "Professor Maoriarty",
+      "criminalId": "5",
       "note": "He's a bad dude. He looks guilty."
     },
     {
       "Date": "2020-10-06",
       "timestamp": 1603385211558,
       "author": "David",
-      "suspect": "Bryan",
+      "criminalId": "7",
       "note": "He's Guilty",
       "id": 2
     },
@@ -20,9 +20,20 @@
       "Date": "2020-10-23",
       "timestamp": 1603461263930,
       "author": "David",
-      "suspect": "Silas",
+      "criminalId": "14",
       "note": "I think he is the criminal. He looks shifty.",
       "id": 3
     }
+  ],
+  "criminals":[
+    {
+      
+
+    }
+
+
   ]
 }
+
+
+
