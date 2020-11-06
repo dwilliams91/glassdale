@@ -42,9 +42,10 @@ const render = (noteCollection, criminalCollection) => {
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id.startsWith("deleteNote--")) {
+        console.log(clickEvent)
         const [prefix, id] = clickEvent.target.id.split("--")
 
-
+        console.log(id)
         /*
             Invoke the function that performs the delete operation.
 

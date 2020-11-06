@@ -43,7 +43,7 @@ eventHub.addEventListener("click", clickEvent=>{
             criminalId: suspect,
             note: note,
         }
-        console.log("new notes",newNote)
+        // console.log("new notes",newNote)
         saveNote(newNote)
     }
 })

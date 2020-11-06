@@ -29,11 +29,21 @@ export const saveNote = note => {
     .then(getNotes)
     .then(dispatchStateChangeEvent)
 }
+
 export const deleteNote = noteId => {
-    console.log(noteId)
+    console.log(`http://localhost:8088/notes/${noteId}`)
     return fetch(`http://localhost:8088/notes/${noteId}`, {
+        
         method: "DELETE"
     })
         .then(getNotes)
 }
 
+// export const deleteNote = noteId => {
+//     console.log(noteId)
+//     return fetch(`http://localhost:8088/notes/${noteId}`, {
+        
+//         method: "DELETE"
+//     })
+//         .then(getNotes)
+// }

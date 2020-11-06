@@ -1,36 +1,28 @@
 {
   "notes": [
     {
-      "Date": "2020-11-25",
-      "timestamp": 1604678410896,
-      "author": "Blah",
-      "criminalId": "1",
-      "note": "Need notes to delete",
+      "Date": "2020-11-11",
+      "timestamp": 1604681050467,
+      "author": "blah",
+      "criminalId": "9",
+      "note": "blah",
       "id": 1
     },
     {
-      "Date": "2020-11-24",
-      "timestamp": 1604678420213,
-      "author": "David",
-      "criminalId": "1",
-      "note": "Need notes to delete",
+      "Date": "2020-11-11",
+      "timestamp": 1604681056997,
+      "author": "blah",
+      "criminalId": "9",
+      "note": "new notes",
       "id": 2
     },
     {
-      "Date": "2020-11-10",
-      "timestamp": 1604678516473,
-      "author": "David",
-      "criminalId": "1",
-      "note": "blah",
+      "Date": "2020-11-11",
+      "timestamp": 1604681058349,
+      "author": "blah",
+      "criminalId": "9",
+      "note": "new notes",
       "id": 3
-    },
-    {
-      "Date": "2020-11-04",
-      "timestamp": 1604680318309,
-      "author": "David",
-      "criminalId": "12",
-      "note": "Blah",
-      "id": 4
     }
   ],
   "criminals": [
