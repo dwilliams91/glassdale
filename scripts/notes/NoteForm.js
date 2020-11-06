@@ -12,7 +12,7 @@ const render = (criminal) => {
         <option  value="0">Please select the suspect</option>
     ${
         criminal.map(criminal => {
-                return `<option id="note--suspect" value="${criminal.id}">${criminal.name}</option>`
+                return `<option id="note--suspect__${criminal.id}" value="${criminal.id}">${criminal.name}</option>`
             }
         )
     }
@@ -20,17 +20,20 @@ const render = (criminal) => {
         <div>
          <textarea id="note--note" placeholder="Notes"></textarea></div>
         <button id="saveNote">Save Note</button>
+        
     `
     contentTarget.innerHTML =htmlRepresentation
     
 }
+
 eventHub.addEventListener("click", clickEvent=>{
     if (clickEvent.target.id==="saveNote"){
         const dateOfInterview= document.querySelector("#note--dateOfInterview").value
         const authorOfNote=document.querySelector("#note--author").value
-        const suspect=document.querySelector("#note--suspect").value
         const note=document.querySelector("#note--note").value
         const timeStamp= Date.now()
+        const suspect=document.querySelector(`#noteForm--criminal`).value
+
 // got values, putting them into a new object
 
         const newNote={
@@ -40,6 +43,7 @@ eventHub.addEventListener("click", clickEvent=>{
             criminalId: suspect,
             note: note,
         }
+        console.log("new notes",newNote)
         saveNote(newNote)
     }
 })
