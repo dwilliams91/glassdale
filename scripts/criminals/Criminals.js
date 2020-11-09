@@ -2,7 +2,7 @@
 
 export const Criminal = (criminalObject, facilities) => {
     return `
-    <div class="criminalCard">
+    <div class="criminalCard" id="criminal-${criminalObject.id}">
         <h4>${criminalObject.name}</h4>
         <div class="criminal__details">
             <p>Convicted for ${criminalObject.conviction}</p>

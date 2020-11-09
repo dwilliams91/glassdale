@@ -27,7 +27,7 @@ eventHub.addEventListener("click", clickEvent=>{
 
 eventHub.addEventListener("click", clickEvent=>{
     if (clickEvent.target.id==="criminalButton"){
-        console.log("criminal button was clicked")
+        // console.log("criminal button was clicked")
         const myEvent=new CustomEvent("CriminalButtonClicked", {
             detail:{
                 displayWitnesses:clickEvent.target.id

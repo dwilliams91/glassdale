@@ -12,7 +12,7 @@ import { getWitnesses, useWitnesses } from "./WitnessProvider.js"
 const eventHub = document.querySelector(".container")
 export const CreateWitnessEventListener = () => {
     eventHub.addEventListener("WitnessStatementClicked", (eventObj) => {
-        console.log("this button was clicked")
+        // console.log("this button was clicked")
         getWitnesses()
             .then(() => {
                 const arrayOfWitnesses = useWitnesses()
