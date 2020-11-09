@@ -1,39 +1,20 @@
 {
   "notes": [
     {
-      "Date": "2020-10-06",
-      "timestamp": 1603385211558,
-      "author": "David",
-      "criminalId": "1",
-      "note": "He's Guilty",
+      "Date": "2020-11-10",
+      "timestamp": 1604938135495,
+      "author": "asdfasd",
+      "criminalId": "7",
+      "note": "asdfasd",
       "id": 2
     },
     {
-      "Date": "2020-10-23",
-      "timestamp": 1603461263930,
-      "author": "David",
-      "criminalId": "14",
-      "note": "I think he is the criminal. He looks shifty.",
-      "id": 3
-    },
-    {
-      "Date": "2020-11-11",
-      "timestamp": 1604590141238,
-      "author": "David",
-      "criminalId": "1",
-      "note": "Will this note work?",
+      "Date": "2020-11-10",
+      "timestamp": 1604938138266,
+      "author": "asdfasd",
+      "criminalId": "7",
+      "note": "asdfasd",
       "id": 4
-    },
-    {
-      "Date": "2020-11-09",
-      "timestamp": 1604592806827,
-      "author": "David",
-      "criminalId": "1",
-      "note": "Will this work?",
-      "id": 5
     }
-  ],
-  "criminals": [
-    {}
   ]
 }
