@@ -30,10 +30,10 @@ export const saveNote = note => {
     .then(dispatchStateChangeEvent)
 }
 
-export const deleteNote = noteId => {
+export const deleteNote = (noteId) => {
     console.log(`http://localhost:8088/notes/${noteId}`)
+
     return fetch(`http://localhost:8088/notes/${noteId}`, {
-        
         method: "DELETE"
     })
         .then(getNotes)
