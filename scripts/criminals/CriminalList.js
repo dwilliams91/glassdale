@@ -96,7 +96,6 @@ export const CriminalList = () => {
     getCriminals()
         .then(getCriminalFacilities())
         .then(getFacilities())
-        .then(getCriminalFacilities)
         .then(
             () => {
                 // Pull in the data now that it has been fetched
