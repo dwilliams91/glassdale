@@ -38,7 +38,7 @@ export const facilitiesList = () => {
 }
 
 const render = (facilities, criminals, facilitiesCriminal) => {
-    const contentTarget = document.querySelector(".facilityContainer")
+    const contentTarget = document.querySelector(".criminalsContainer")
     // map facilites. For each of the facilities
     
     contentTarget.innerHTML= facilities.map(
