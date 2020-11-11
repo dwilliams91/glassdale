@@ -5,7 +5,7 @@ const eventHub = document.querySelector(".container")
 // creating a function with an eventlistener that is being exported to the dom
 export const CreatAlibiEventListener=()=>{
     eventHub.addEventListener("alibiButtonClicked", (eventObj)=>{
-        // getting the criminals
+        console.log("you clicked on the alibi button")
         const arrayOfCriminals=useCriminals()
         // returning the criminal who have the id that is the same as the id of the button clicked. 
         const foundCriminal=arrayOfCriminals.find((criminalObj)=> {
