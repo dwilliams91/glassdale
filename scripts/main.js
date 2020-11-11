@@ -11,6 +11,8 @@ import{CreatAlibiEventListener} from './criminals/AlibiList.js'
 import { CreateWitnessEventListener } from './witnesses/WitnessList.js'
 import { witnessButton } from './witnesses/WitnessButton.js'
 import { getWitnesses, useWitnesses } from './witnesses/WitnessProvider.js'
+import { FacilitiesButton } from './facilities/DisplayFacilitiesButton.js'
+import {  facilitiesList } from './facilities/FacilitiesList.js'
 
 console.log("Welcome to the main module")
  
@@ -24,5 +26,8 @@ CreatAlibiEventListener()
 CreateWitnessEventListener()
 witnessButton()
 CreateCriminalEventListener()
+FacilitiesButton()
+// delete this later
+// facilitiesList()
 
 
