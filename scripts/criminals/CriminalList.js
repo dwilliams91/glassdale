@@ -8,7 +8,9 @@ const eventHub = document.querySelector(".container")
 
 // dispatching the alibi event listener
 
-
+let criminals=[]
+let facilities=[]
+let criminalFacities=[]
 
 
 
@@ -21,19 +23,10 @@ eventHub.addEventListener("crimeChosen", event => {
             return convictionObj.id === parseInt(event.detail.crimeThatWasChosen)
         })
         const matchingCriminals = listOfCriminals.filter(criminal => criminal.conviction === convictionThatWasChosen.name)
-        getCriminalFacilities()
-            .then(getFacilities())
-            .then(getCriminalFacilities)
-            .then(
-                () => {
-                    // Pull in the data now that it has been fetched
-                    const facilities = useFacilities()
-                    const crimFac = useCriminalFacilities()
-
-                    // Pass all three collections of data to render()
-                    render(matchingCriminals, facilities, crimFac)
-                }
-            )
+        
+        criminals=matchingCriminals
+        render()
+                
     }
 })
 
@@ -45,37 +38,29 @@ eventHub.addEventListener("officerSelected", event => {
             return officerObj.id === parseInt(event.detail.officer)
         })
         const findingArrestOfficer = listOfCriminals.filter(criminal => criminal.arrestingOfficer === officerThatWasChosen.name)
-        getCriminalFacilities()
-            .then(getFacilities())
-            .then(getCriminalFacilities)
-            .then(
-                () => {
-                    // Pull in the data now that it has been fetched
-                    const facilities = useFacilities()
-                    const crimFac = useCriminalFacilities()
-
-                    // Pass all three collections of data to render()
-                    render(findingArrestOfficer, facilities, crimFac)
-                }
-            )
+        criminals=findingArrestOfficer
+        render()
+                
+        
     }
 })
-const render = (criminalsToRender, allFacilities, allRelationships) => {
+
+const render = () => {
     // Step 1 - Iterate all criminals
     const contentTarget = document.querySelector(".criminalsContainer")
-    contentTarget.innerHTML = criminalsToRender.map(
+    contentTarget.innerHTML = criminals.map(
         (criminalObject) => {
             // Step 2 - Filter all relationships to get only ones for this criminal
-            const facilityRelationshipsForThisCriminal = allRelationships.filter(cf => cf.criminalId === criminalObject.id)
+            const facilityRelationshipsForThisCriminal = criminalFacities.filter(cf => cf.criminalId === criminalObject.id)
 
             // Step 3 - Convert the relationships to facilities with map()
-            const facilities = facilityRelationshipsForThisCriminal.map(cf => {
-                const matchingFacilityObject = allFacilities.find(facility => facility.id === cf.facilityId)
+            const foundfacilities = facilityRelationshipsForThisCriminal.map(cf => {
+                const matchingFacilityObject = facilities.find(facility => facility.id === cf.facilityId)
                 return matchingFacilityObject
             })
 
             // Must pass the matching facilities to the Criminal component
-            return Criminal(criminalObject, facilities)
+            return Criminal(criminalObject, foundfacilities)
         }
     ).join("")
 }
@@ -99,12 +84,12 @@ export const CriminalList = () => {
         .then(
             () => {
                 // Pull in the data now that it has been fetched
-                const facilities = useFacilities()
-                const crimFac = useCriminalFacilities()
-                const criminals = useCriminals()
+                facilities = useFacilities()
+                criminalFacities = useCriminalFacilities()
+                criminals = useCriminals()
 
                 // Pass all three collections of data to render()
-                render(criminals, facilities, crimFac)
+                render()
             }
         )
 
@@ -122,12 +107,13 @@ export const CreateCriminalEventListener = () => {
         .then(
             () => {
                 // Pull in the data now that it has been fetched
-                const facilities = useFacilities()
-                const crimFac = useCriminalFacilities()
-                const criminals = useCriminals()
+                facilities = useFacilities()
+                criminalFacities = useCriminalFacilities()
+                criminals = useCriminals()
+
 
                 // Pass all three collections of data to render()
-                render(criminals, facilities, crimFac)
+                render()
             }
         )
     })
